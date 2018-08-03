@@ -1,3 +1,4 @@
+#Adapted from https://github.com/SNOC/rpisigfox
 import time
 import serial
 import sys
