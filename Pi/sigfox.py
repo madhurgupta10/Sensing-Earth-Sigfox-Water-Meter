@@ -94,7 +94,7 @@ if __name__ == '__main__':
     while True:
         data = arduino.readline()   #read data from arduino
         if data:
-            message = json.loads(data)
+            message = json.loads(data[0])
             message['count'] = PeopleCounterApp()
 
     message = json.dumps(message, ensure_ascii=False)
