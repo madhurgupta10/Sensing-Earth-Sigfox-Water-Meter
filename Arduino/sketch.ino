@@ -1,3 +1,5 @@
+//Adapted from https://www.dfrobot.com/wiki/index.php/Turbidity_sensor_SKU:_SEN0189
+//Adapted from https://www.dfrobot.com/wiki/index.php/PH_meter(SKU:_SEN0161)
 #define SensorPin A0 // pH meter Analog output to Arduino Analog Input 0
 #define Offset 0.00  // deviation compensate
 #define samplingInterval 20
