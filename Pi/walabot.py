@@ -1,3 +1,4 @@
+#Adapted from https://github.com/Walabot-Projects/Walabot-PeopleCounter
 from __future__ import print_function # WalabotAPI works on both Python 2 an 3.
 from sys import platform
 from os import system
