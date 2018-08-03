@@ -84,6 +84,13 @@ class Sigfox(object):
 
 if __name__ == '__main__':
     
+    def split_by_length(s,block_size):
+    w=[]
+    n=len(s)
+    for i in range(0,n,block_size):
+        w.append(s[i:i+block_size])
+    return w
+    
     if len(sys.argv) == 3:
             portName = sys.argv[2]
             sgfx = Sigfox(portName)
@@ -98,7 +105,10 @@ if __name__ == '__main__':
             message['count'] = PeopleCounterApp()
 
     message = json.dumps(message, ensure_ascii=False)
+    message = message.encode().hex()
+    message_list = split_by_length(message, 24)
     if len(sys.argv) > 1:
         message = "{0}".format(sys.argv[1])
-    sgfx.sendMessage(message)
+    for m in message_list:
+        sgfx.sendMessage(me)
     time.sleep(600) #sleep for 10 min
