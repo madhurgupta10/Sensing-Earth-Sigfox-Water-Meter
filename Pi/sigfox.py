@@ -110,5 +110,5 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         message = "{0}".format(sys.argv[1])
     for m in message_list:
-        sgfx.sendMessage(me)
+        sgfx.sendMessage(m)
     time.sleep(600) #sleep for 10 min
